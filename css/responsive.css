@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+  html{
+    font-size: 14px;
+  }
+
+  header .burger{
+    display: block;
+  }
+
+  header .mobile-menu{
+    display: none;
+    position: absolute;
+    min-height: 62px;
+    top: 62px;
+    width: 100%;
+    left: 0;
+    background-color: #299df4;
+    padding: 10px 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  header form{
+    margin: 10px 20px;
+  }
+  .main .wrapper{
+    padding: 40px 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,338 @@
+html{
+  font: 16px/1.4 'Open Sans', serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #eff3f6;
+}
+
+a{
+  text-decoration: none;
+}
+
+.flex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+
+input:focus{
+    outline: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header{
+  width: 100%;
+  background-color: #299df4;
+}
+
+header .wrapper{
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 62px;
+}
+
+header .logo{
+  background: #1166a5 url(../img/logo.png) center center no-repeat;
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid #1e82cd;
+  margin-right: 20px;
+  display: block;
+}
+
+header .mobile-menu{
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+header .mobile-menu.active{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+}
+
+header form{
+  min-width: 240px;
+  max-width: 240px;
+  position: relative;
+}
+
+header form input[type="text"]{
+  width: 100%;
+  background-color: #1e8fe4;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid #1a84d2;
+  padding: 0 40px 0 12px;
+  color: #FFF;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+header form input[type="submit"]{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 12px;
+  top: 50%;
+  margin-top: -8px;
+  background: url(../img/search.png) center center no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+header form ::-webkit-input-placeholder {color:#83c2f0;}
+header form ::-moz-placeholder          {color:#83c2f0;}
+header form :-moz-placeholder           {color:#83c2f0;}
+header form :-ms-input-placeholder      {color:#83c2f0;}
+
+header nav .select{
+  position: relative;
+  margin-right: 10px;
+}
+
+header nav > a{
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #fff;
+  position: relative;
+  margin-left: 25px;
+}
+
+header nav > a span{
+  position: absolute;
+  font-size: 10px;
+  background-color: #ff7800;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  line-height: 18px;
+  bottom: 50%;
+  right: -12px;
+}
+
+header nav > a:hover{
+  text-decoration: underline;
+}
+
+header nav p
+{
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+header nav ul{
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+header .profile{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex:1;
+      -ms-flex:1;
+          flex:1;
+  width: 50px; 
+  position: relative;
+  margin-left: 35px;
+  padding-right: 14px;
+  cursor: pointer;
+}
+
+header .profile img{
+  display: inline-block;
+  border-radius: 50%;
+}
+
+header .profile:after,
+header nav .select p:after{
+  content: url(../img/arrow-down.png);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  background-size: contain;
+  border: none;
+}
+
+header .profile ul,
+header nav ul{
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #1a84d2;
+  border-radius: 3px;
+  background-color: #299df4;
+}
+
+header .profile ul{
+  right: 0;
+}
+
+header nav .select ul.active,
+header .profile ul.active{
+  visibility: visible;
+}
+
+header .profile li,
+header nav .select li{
+  white-space: nowrap;
+  list-style-type: none;
+  color: #fff;
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding: 5px 20px;
+  text-align: center;
+  border-bottom: 1px solid #1a84d2;
+}
+
+header nav li:hover,
+header .profile li:hover{
+  background-color: #1166a5 ;
+}
+
+header .burger{
+  cursor: pointer;
+  display: none;
+  margin-left: 24px;
+  width: 24px;
+  height: 24px;
+  background: url(../img/menu-button.png) center center no-repeat;
+}
+
+.main .wrapper{
+  padding: 90px 0;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.main .block{
+  display: inline-block;
+  min-width: 240px;
+  padding: 8px;
+  margin: 0 13px 26px;
+  background-color: #fff;
+  border: 1px solid #e6ebef;
+  border-radius: 6px;
+}
+
+.main .block > img{
+  width: 100%;
+}
+
+.main .details{
+  padding: 10px;
+  padding: 10px;
+  padding: 0.625rem;
+}
+
+.main .details h2{
+  color: #1c2c43;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.main .details p{
+  color: #9aa7b7;
+  font-size: 10px;
+  font-size: 0.625rem;
+}
+
+.main .details p span{
+  font-weight: 600;
+}
+
+.main .details ul{
+  margin-top: 15px;
+}
+
+.main .details li{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.main .details li:first-child{
+  background-color: #e8eaf1;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #828696;
+}
+
+.main .details li.more{
+  background-color: #e8eaf1;
+  text-align: center;
+  line-height: 30px;
+  color: #1c2c43;
+  font-size: 10px;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.main .details li:first-child:hover,
+.main .details li.more:hover{
+  background-color: #39af4a;
+  color: #FFF;
+}
