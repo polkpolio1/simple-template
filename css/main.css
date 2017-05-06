@@ -271,7 +271,8 @@ header .burger{
   text-align: left;
 }
 
-.main .block > img{
+
+.main .block > a img{
   width: 100%;
 }
 
