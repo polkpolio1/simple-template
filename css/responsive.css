@@ -26,6 +26,8 @@
   }
   .main .wrapper{
     padding: 40px 0;
+  }
+  .main .block{
     text-align: center;
   }
 }

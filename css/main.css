@@ -255,7 +255,6 @@ header .burger{
 
 .main .wrapper{
   padding: 90px 0;
-  max-width: 1200px;
   text-align: center;
 }
 
@@ -267,6 +266,7 @@ header .burger{
   background-color: #fff;
   border: 1px solid #e6ebef;
   border-radius: 6px;
+  text-align: left;
 }
 
 .main .block > img{
